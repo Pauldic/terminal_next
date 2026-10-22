@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-10-21 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "terminal",
+  "area_type",
+  "column_break_nfdc",
+  "area_code",
+  "area_name",
+  "status",
+  "section_break_vpxr",
+  "description"
+ ],
+ "fields": [
+  {
+   "default": "TA.YY.-.######",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "TA.YY.-.######",
+   "reqd": 1
+  },
+  {
+   "fieldname": "terminal",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Terminal",
+   "options": "Terminal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Area Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area_code",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Area Code",
+   "reqd": 1
+  },
+  {
+   "default": "Container Yard",
+   "fieldname": "area_type",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Area Type",
+   "options": "Container Yard\nCFS Warehouse\nEmpty Depot\nInspection Area\nReefer Area\nGeneral Cargo\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nBlocked",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_nfdc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vpxr",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-21 13:17:36.272447",
+ "modified_by": "Administrator",
+ "module": "Terminal Next",
+ "name": "Terminal Area",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "area_name,area_code,terminal",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "area_name",
+ "track_changes": 1
+}

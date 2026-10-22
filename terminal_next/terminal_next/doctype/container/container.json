@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:container_number",
+ "creation": "2026-10-21 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "container_number",
+  "iso_size_type",
+  "container_type",
+  "length_ft",
+  "tare_weight_kg",
+  "column_break_gyto",
+  "gross_weight_kg",
+  "shipping_line",
+  "operational_status",
+  "current_terminal",
+  "current_yard_slot",
+  "seal_number",
+  "section_break_dbrh",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "container_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Container Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "For example 22G1 or 45G1; validate against your terminal's accepted ISO 6346 codes.",
+   "fieldname": "iso_size_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ISO Size/Type"
+  },
+  {
+   "default": "Dry",
+   "fieldname": "container_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Container Type",
+   "options": "Dry\nReefer\nOpen Top\nFlat Rack\nTank\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "20",
+   "fieldname": "length_ft",
+   "fieldtype": "Select",
+   "label": "Length (ft)",
+   "options": "20\n40\n45",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tare_weight_kg",
+   "fieldtype": "Float",
+   "label": "Tare Weight (kg)",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "gross_weight_kg",
+   "fieldtype": "Float",
+   "label": "Gross Weight (kg)",
+   "non_negative": 1
+  },
+  {
+   "description": "Temporary link to ERPNext Customer; replace with a Shipping Line DocType if needed.",
+   "fieldname": "shipping_line",
+   "fieldtype": "Link",
+   "label": "Shipping Line",
+   "options": "Customer"
+  },
+  {
+   "default": "Expected",
+   "fieldname": "operational_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Operational Status",
+   "options": "Expected\nIn Yard\nIn Transit\nLoaded\nOut-Gated\nOn Hold",
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_terminal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Current Terminal",
+   "options": "Terminal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_yard_slot",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Current Yard Slot",
+   "options": "Yard Slot",
+   "read_only": 1
+  },
+  {
+   "fieldname": "seal_number",
+   "fieldtype": "Data",
+   "label": "Seal Number"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_gyto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dbrh",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-21 13:07:58.618806",
+ "modified_by": "Administrator",
+ "module": "Terminal Next",
+ "name": "Container",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "container_number,iso_size_type,shipping_line",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "container_number",
+ "track_changes": 1
+}

@@ -53,3 +53,7 @@ jspm_packages/
 
 # Aider AI Chat
 .aider*
+
+# Built by the frontend
+terminal_next/public/frontend
+terminal_next/www/tos.html

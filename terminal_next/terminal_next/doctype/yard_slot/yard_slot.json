@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:slot_code",
+ "creation": "2026-10-21 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "terminal",
+  "terminal_area",
+  "yard_block",
+  "status",
+  "current_container",
+  "column_break_myzz",
+  "bay",
+  "row",
+  "tier",
+  "slot_code",
+  "section_break_vebf",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "terminal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Terminal",
+   "options": "Terminal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "terminal_area",
+   "fieldtype": "Link",
+   "label": "Terminal Area",
+   "options": "Terminal Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "yard_block",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Yard Block",
+   "options": "Yard Block",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bay",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Bay",
+   "reqd": 1
+  },
+  {
+   "fieldname": "row",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Row",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tier",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Tier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "slot_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Slot Code",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Available\nBlocked\nMaintenance",
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_container",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Current Container",
+   "options": "Container",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_myzz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vebf",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-21 13:11:54.557936",
+ "modified_by": "Administrator",
+ "module": "Terminal Next",
+ "name": "Yard Slot",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "slot_code,yard_block,current_container",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "slot_code",
+ "track_changes": 1
+}

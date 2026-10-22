@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-10-21 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "terminal",
+  "terminal_area",
+  "block_name",
+  "block_code",
+  "column_break_auuw",
+  "bays",
+  "rows",
+  "tiers",
+  "status",
+  "section_break_ouzc",
+  "notes"
+ ],
+ "fields": [
+  {
+   "default": "YB.YY.-.######",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "YB.YY.-.######",
+   "reqd": 1
+  },
+  {
+   "fieldname": "terminal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Terminal",
+   "options": "Terminal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "terminal_area",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Terminal Area",
+   "options": "Terminal Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "block_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Block Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "block_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Block Code",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "bays",
+   "fieldtype": "Int",
+   "label": "Number of Bays",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "rows",
+   "fieldtype": "Int",
+   "label": "Number of Rows",
+   "reqd": 1
+  },
+  {
+   "default": "5",
+   "fieldname": "tiers",
+   "fieldtype": "Int",
+   "label": "Maximum Stack Tiers",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nBlocked",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_auuw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ouzc",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-21 13:15:37.063698",
+ "modified_by": "Administrator",
+ "module": "Terminal Next",
+ "name": "Yard Block",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "block_name,block_code,terminal,terminal_area",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "block_name",
+ "track_changes": 1
+}

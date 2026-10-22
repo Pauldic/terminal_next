@@ -262,3 +262,7 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+# Load the frontend on every path under /tos
+website_route_rules = [
+	{"from_route": "/tos/<path:app_path>", "to_route": "tos"},
+]
